@@ -324,6 +324,29 @@
   .cta-meta{font-size:12.5px; color:#C3E0BA; margin-bottom:26px;}
   .cta-btn{display:inline-block; min-width:280px; background:var(--gold); color:#3A2A05; font-weight:900; font-size:16px; padding:17px 34px; border-radius:8px; text-decoration:none;}
   .cta-note{font-size:12px; color:#B7D9AC; margin-top:14px;}
+  .cta-benefit{
+    display:inline-block; background:rgba(255,255,255,0.12); color:#fff;
+    font-size:13px; font-weight:800; padding:7px 14px; border-radius:100px; margin-bottom:14px;
+  }
+  .cta-original{
+    font-size:14px; color:#C3E0BA; text-decoration:line-through; margin-bottom:2px;
+  }
+  .grade-apply{
+    max-width:640px; margin:28px auto 0; padding:24px 20px;
+    background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); border-radius:14px;
+  }
+  .grade-apply-title{font-size:15px; color:#fff; font-weight:800; margin-bottom:14px;}
+  .grade-btn-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+  .grade-btn{
+    display:block; background:var(--gold); color:#3A2A05; font-weight:900; font-size:14px;
+    padding:13px 10px; border-radius:8px; text-decoration:none;
+  }
+  .apply-rules{
+    margin-top:18px; font-size:12px; line-height:1.75; color:#D9EBD3;
+  }
+  @media(min-width:640px){
+    .grade-btn-grid{grid-template-columns:repeat(3,1fr);}
+  }
 
   .mini-cta{background:var(--gold-tint); border-top:1px solid #EDDFB8; border-bottom:1px solid #EDDFB8; padding:22px; text-align:center;}
   .mini-cta p{color:var(--pine-deep); font-weight:700; font-size:14px; margin:0 0 12px;}
@@ -653,13 +676,13 @@
 <section class="s9">
   <div class="wrap">
     <span class="tag peach center" style="display:table; margin:0 auto 14px;">모집 안내</span>
-    <h2>선착순으로만 모집합니다</h2>
+    <h2>학년별 선착순 10명만 모집합니다</h2>
     <div class="scarce-box">
       <ul class="scarce-list">
-        <li>라이브 수업에서 실시간 소통·개별 피드백이 가능한 인원은 <b>반당 5~10명</b>입니다</li>
-        <li>학년별로 반이 따로 채워져, 신청 몰리는 학년은 정원보다 먼저 마감될 수 있습니다</li>
-        <li>신입생은 <b>매달 말일 기준</b>으로 모집하며, 자리가 없으면 다음 달까지 <b>대기</b>해야 할 수도 있습니다</li>
-        <li>학년별 신청 인원이 <b>최소 5명이 모이지 않으면</b> 해당 학년 반은 개설되지 않습니다</li>
+        <li>선착순 순서는 <b>구글폼 신청서 제출 시간</b>을 기준으로 결정됩니다</li>
+        <li>학년별 <b>최소 5명</b>이 모집되면 반이 개설되며, <b>최대 10명</b>까지 함께합니다</li>
+        <li>5명 미만인 경우 <b>개설 대기 명단</b>에 등록되며, 5명이 채워지면 반 개설 및 결제 안내를 드립니다</li>
+        <li>10명 이후 신청자는 <b>대기자 명단</b>에 등록되며, 자리가 생기면 신청 순서대로 안내드립니다</li>
       </ul>
     </div>
   </div>
@@ -703,7 +726,7 @@
     <p class="reveal-sub">독해 원리를 배우고, 교과서에 그대로 적용해 정리하고,<br>생각독서로 여러 친구들과 생각을 나눈 뒤,<br>내 생각을 정리해 글로 씁니다.</p>
     <p class="reveal-sub" style="margin-top:-8px; font-size:13px;"><b style="color:var(--pine-deep);">생각독서</b>는 책에 대해 깊이 이야기 나누는 라이브 수업이고, 글쓰기는 숙제로 이어집니다.<br>마지막 주차에는 3권의 책을 엮어 심화 글쓰기 활동을 합니다.</p>
     <div class="hero-badges">
-      <span class="hbadge">초3~초6</span>
+      <span class="hbadge">초1~초6</span>
       <span class="hbadge">반당 5~10명</span>
       <span class="hbadge">주2회 라이브</span>
     </div>
@@ -730,7 +753,7 @@
     <div class="info-block">
       <h3>구성</h3>
       <div class="compose-grid">
-        <div class="compose-row"><div class="ic">✓</div><p>학년별 반 편성 (초3~초6, 반당 5~10명)</p></div>
+        <div class="compose-row"><div class="ic">✓</div><p>학년별 반 편성 (초1~초6, 반당 5~10명)</p></div>
         <div class="compose-row"><div class="ic">✓</div><p>주2회 라이브 수업 — 독해 1회 + 생각독서 1회 (글쓰기는 숙제로 진행)</p></div>
         <div class="compose-row"><div class="ic">✓</div><p>예온쌤 R.E.A.D. 사이트 — 독해메이트, 교과서 학습, 교과연계도서&글쓰기 자기주도 학습</p></div>
         <div class="compose-row"><div class="ic">✓</div><p>독해·글쓰기 각각 개별 직접 피드백</p></div>
@@ -786,31 +809,41 @@
 
 <section class="cta-section" id="final-cta">
   <div class="wrap">
+    <div class="cta-benefit">🎁 설명회 참석 감사 혜택 · 9월 등록 한정</div>
     <h2>아이에게 공부를 하나 더 추가하지 마세요</h2>
     <p class="sub">지금 하는 공부를 스스로 해내는 방법을 만들어주세요.</p>
-    <div class="cta-price">320,000<span class="won">원</span></div>
-    <div class="cta-meta">초3~초6 · 반당 5~10명 · 선착순 마감</div>
-    <a href="#" class="cta-btn" id="ctaBtn">R.E.A.D. 신청하기</a>
-    <div class="cta-note">자세한 안내는 신청 페이지에서 확인해주세요</div>
+    <div class="cta-original">정상 수강료 330,000원</div>
+    <div class="cta-price">300,000<span class="won">원</span></div>
+    <div class="cta-meta">카드·계좌이체 동일 · 9월 수강료 3만원 할인</div>
+
+    <div class="grade-apply" id="grade-apply">
+      <div class="grade-apply-title">자녀의 학년을 선택해 신청해주세요</div>
+      <div class="grade-btn-grid">
+        <a class="grade-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfxQr8PlPOMY6hdbTzzDoZd_K44KFJ64fN_K5Q2wX3Yy1rLbg/viewform?usp=dialog" target="_blank" rel="noopener">1학년 신청하기</a>
+        <a class="grade-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdpcvGME_VBaQeXaq-n_hJ9ye9CB1heUIiQZB45dMWshcy5hQ/viewform?usp=dialog" target="_blank" rel="noopener">2학년 신청하기</a>
+        <a class="grade-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd5_v8N_0iwEurYbnWdtreEyMq8aSjProhHhylBGjrgfAyJ-A/viewform?usp=dialog" target="_blank" rel="noopener">3학년 신청하기</a>
+        <a class="grade-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeAqwDBsBHr0R7SZDEhMQq2kGbnqZSbqExZUuu1WDAdXxT9aA/viewform?usp=dialog" target="_blank" rel="noopener">4학년 신청하기</a>
+        <a class="grade-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeO2tPzlng5R1e5MmWDXsYVD_Q8yr0qBGteQZa8IfhEGUtaJQ/viewform?usp=dialog" target="_blank" rel="noopener">5학년 신청하기</a>
+        <a class="grade-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfwsVUPzNtVOR_-kGo7g9QtkYBfRUIpAvbZ1jOPwTKnq9PsWw/viewform?usp=dialog" target="_blank" rel="noopener">6학년 신청하기</a>
+      </div>
+      <div class="apply-rules">
+        선착순은 <b>구글폼 제출 시간</b> 기준입니다.<br>
+        학년별 <b>5명 모집 시 반 개설</b> · <b>최대 10명 마감</b><br>
+        5명 미만은 개설 대기 명단, 10명 이후는 대기자 명단에 등록됩니다.<br>
+        반 개설이 확정되면 신청 순서대로 결제 안내를 드립니다.
+      </div>
+    </div>
+
+    <div class="cta-note">구글폼 제출 후 안내사항을 꼭 확인해주세요</div>
   </div>
 </section>
 
 <footer>예온쌤 · @yeon_momteacher &nbsp;·&nbsp; ⓒ 예온쌤. All rights reserved.</footer>
 
 <div class="sticky-cta">
-  <div class="price">320,000원<span>초3~초6 · 선착순 마감</span></div>
-  <a href="#" id="ctaBtnSticky">신청하기</a>
+  <div class="price">300,000원<span>9월 OPEN 혜택 · 초1~초6</span></div>
+  <a href="#grade-apply" id="ctaBtnSticky">학년 선택</a>
 </div>
 
-<script>
-  function handleCtaClick(e){
-    if(this.getAttribute('href') === '#'){
-      e.preventDefault();
-      alert('신청 링크를 연결해주세요 (href 속성 교체)');
-    }
-  }
-  document.getElementById('ctaBtn').addEventListener('click', handleCtaClick);
-  document.getElementById('ctaBtnSticky').addEventListener('click', handleCtaClick);
-</script>
 </body>
 </html>
