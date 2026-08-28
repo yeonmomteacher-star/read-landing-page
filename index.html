@@ -1130,6 +1130,87 @@
   }
 
 </style>
+
+<style id="schedule-confirm-style">
+  .schedule-confirm-box{
+    max-width:760px;
+    margin:26px auto 0;
+    padding:38px 34px;
+    border:1.5px solid #D8D4CA;
+    border-radius:28px;
+    background:#F7FBF5;
+    text-align:center;
+  }
+  .schedule-confirm-badge{
+    display:inline-block;
+    margin-bottom:18px;
+    padding:7px 16px;
+    border-radius:999px;
+    background:#E6F3E2;
+    color:#2F7046;
+    font-size:13px;
+    font-weight:800;
+  }
+  .schedule-confirm-box h3{
+    margin:0 0 18px;
+    color:#174C30;
+    font-family:'Noto Serif KR',serif;
+    font-size:24px;
+    line-height:1.55;
+    word-break:keep-all;
+  }
+  .schedule-confirm-box p{
+    margin:0;
+    color:#5E615E;
+    font-size:14px;
+    line-height:1.85;
+    word-break:keep-all;
+  }
+  .schedule-confirm-points{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:24px;
+  }
+  .schedule-confirm-points span{
+    padding:8px 13px;
+    border-radius:999px;
+    background:#fff;
+    border:1px solid #DCE5D9;
+    color:#2F7046;
+    font-size:12px;
+    font-weight:800;
+  }
+  @media(max-width:720px){
+    .schedule-confirm-box{
+      margin-top:20px;
+      padding:28px 20px;
+      border-radius:22px;
+    }
+    .schedule-confirm-badge{
+      font-size:11.5px;
+      margin-bottom:14px;
+    }
+    .schedule-confirm-box h3{
+      font-size:18px;
+      line-height:1.6;
+    }
+    .schedule-confirm-box p{
+      font-size:12.5px;
+      line-height:1.8;
+    }
+    .schedule-confirm-points{
+      gap:7px;
+      margin-top:20px;
+    }
+    .schedule-confirm-points span{
+      font-size:10.5px;
+      padding:7px 10px;
+    }
+  }
+</style>
+
 </head>
 <body>
 
@@ -1664,25 +1745,25 @@
 </section>
 
 
-<!-- R.E.A.D 수업 시간표 -->
+<!-- R.E.A.D 수업 시간 안내 -->
 <section class="detail-section white">
   <div class="wrap">
-    <h2 class="detail-title">R.E.A.D. 수업 시간표 <span style="font-size:17px;">(주2회, 한 달 4주 수업)</span></h2>
-    <div class="schedule-note-top">화요일 · 금요일 운영</div>
-    <div class="schedule-wrap">
-      <table class="schedule-table">
-        <thead><tr><th>학년</th><th>화요일</th><th>금요일</th></tr></thead>
-        <tbody>
-          <tr><td>1학년</td><td>1:30 ~ 2:20</td><td>1:30 ~ 2:20</td></tr>
-          <tr><td>2학년</td><td>2:30 ~ 3:20</td><td>2:30 ~ 3:20</td></tr>
-          <tr><td>3학년</td><td>3:30 ~ 4:20</td><td>3:30 ~ 4:20</td></tr>
-          <tr><td>4학년</td><td>4:30 ~ 5:20</td><td>4:30 ~ 5:20</td></tr>
-          <tr><td>5학년</td><td>7:30 ~ 8:20</td><td>7:40 ~ 8:30</td></tr>
-          <tr><td>6학년</td><td>8:30 ~ 9:20</td><td>8:40 ~ 9:20</td></tr>
-        </tbody>
-      </table>
+    <h2 class="detail-title">R.E.A.D. 수업 시간 안내 <span style="font-size:17px;">(주2회, 한 달 4주 수업)</span></h2>
+
+    <div class="schedule-confirm-box">
+      <div class="schedule-confirm-badge">수업 시간은 모집 완료 후 확정됩니다</div>
+      <h3>학년별 모집이 완료되면<br>신청자 일정을 확인해 수업 시간을 조율합니다.</h3>
+      <p>
+        신청 단계에서는 희망 가능한 시간을 확인하고,<br>
+        반 개설이 확정된 뒤 참여 가능한 시간대를 조율하여<br>
+        최종 수업 시간을 안내드립니다.
+      </p>
+      <div class="schedule-confirm-points">
+        <span>✓ 주 2회 수업</span>
+        <span>✓ 한 달 4주 진행</span>
+        <span>✓ 개설 확정 후 시간 안내</span>
+      </div>
     </div>
-    <div class="schedule-foot">※ 1~4학년은 화·금 동일 시간, 5~6학년은 요일별 시간이 다릅니다.</div>
   </div>
 </section>
 
